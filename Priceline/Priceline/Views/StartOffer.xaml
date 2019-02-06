@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Priceline.Views.StartOffer"
+             BackgroundColor="White"
+             Padding="14"
+             Title="Bid details">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Destination" />
+            <Entry Placeholder="Enter Destination" Keyboard="Text" x:Name="Destination" />
+            <Label Text="Rating" />
+            <Picker x:Name="RatePicker" SelectedIndex="1" />
+            <Button
+                BackgroundColor="#2196F3"
+                Clicked="PreviewBid"
+                Text="Proceed"
+                TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

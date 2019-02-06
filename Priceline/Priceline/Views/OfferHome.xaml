@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Priceline.Views.OfferHome"
+             Title="Home"
+             Padding="14"
+             BackgroundColor="White"
+             BackgroundImage="back.jpg">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="new" Icon="hom.png"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout Orientation="Vertical" Padding="10" Spacing="40">
+
+
+                <Image Source="log.png" />
+
+                <ActivityIndicator
+                x:Name="activityIndicator"
+                IsEnabled="true"
+                IsRunning="{Binding IsBusy}"
+                IsVisible="true"
+                Color="#E3435D"/>
+                
+                <Frame BackgroundColor="Transparent" HasShadow="True" OutlineColor="Aquamarine" BorderColor="#29A3F7" CornerRadius="10" InputTransparent="True"  >
+                    <StackLayout Orientation="Vertical" Spacing="10">
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <StackLayout Orientation="Horizontal">
+                                <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="desti.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                                <Entry Placeholder="Destination" x:Name="destination" TextColor="Black" HeightRequest="50"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="city.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                                <Entry Placeholder="City/Location" x:Name="city" TextColor="Black"  HeightRequest="50"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <StackLayout Orientation="Horizontal">
+                                <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="inDate.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                                <DatePicker x:Name="checkInDate" DateSelected="CheckInDate_DateSelected" TextColor="Black"  HeightRequest="50"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="outDate.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+
+                                <DatePicker x:Name="checkOutDate" DateSelected="CheckOutDate_DateSelected" TextColor="Black"  HeightRequest="50"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <StackLayout Orientation="Horizontal">
+                                <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="rate.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                                <Entry Keyboard="Numeric" Placeholder="Star Rating" x:Name="rating" TextColor="Black"  HeightRequest="50"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="room.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                                <Entry Keyboard="Numeric" Placeholder="No. Rooms" x:Name="RoomPicker" TextColor="Black"  HeightRequest="50"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal">
+                                <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="amount.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                                <Entry Keyboard="Numeric" Placeholder="Bid Amount" x:Name="bidAmount" TextColor="Black"  HeightRequest="50"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+
+                                <Button
+                                BackgroundColor="#2196F3"
+                                Clicked="StartBid"
+
+                                Text="Start Your Bid"
+                                TextColor="White" />
+                            </StackLayout>
+
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

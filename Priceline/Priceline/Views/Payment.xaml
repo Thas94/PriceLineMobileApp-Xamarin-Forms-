@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Priceline.Views.Payment"
+             BackgroundColor="White"
+             Padding="14"
+             Title="Payment"
+             BackgroundImage="payd.jpg">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Spacing="10">
+
+               
+
+                <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="holder.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Text="{Binding acc_holder}" TextColor="#2196F3" HeightRequest="50" WidthRequest="100" x:Name="acc_holder"/>
+                    </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="phone.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Text="{Binding phone_no}" TextColor="#2196F3" HeightRequest="50" WidthRequest="100" x:Name="phone_no"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="bankN.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Text="{Binding bank_Name}" TextColor="#2196F3" HeightRequest="50" WidthRequest="100" x:Name="bank_Name"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="cards.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Text="{Binding card_no}" TextColor="#2196F3" HeightRequest="50" WidthRequest="100" x:Name="card_no"/>
+                    </StackLayout>
+                
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="accN.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+
+                    <Entry Text="{Binding acc_no}" TextColor="#2196F3" HeightRequest="50" WidthRequest="100" x:Name="acc_no"/>
+                    </StackLayout>
+                
+                  <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="branch.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Text="{Binding branch_no}" TextColor="#2196F3" HeightRequest="50" WidthRequest="100" x:Name="branch_no"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="type.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Text="{Binding acc_Type}" TextColor="#2196F3" HeightRequest="50" WidthRequest="100" x:Name="acc_Type"/>
+                    </StackLayout>
+            
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="cvv.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Text="{Binding cvv}" TextColor="#2196F3" HeightRequest="50" WidthRequest="100" x:Name="cvv"/>
+                    </StackLayout>
+                
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="date.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Entry Text="{Binding exp_Date}" TextColor="#2196F3" HeightRequest="50" WidthRequest="100" x:Name="exp_Date"/>
+
+                    </StackLayout>
+                </StackLayout>
+
+                <Button
+                    BackgroundColor="#2196F3"
+                    Text="Make payment"
+                    TextColor="White"
+                    Clicked="Button_Clicked"/>
+            </StackLayout>
+            
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

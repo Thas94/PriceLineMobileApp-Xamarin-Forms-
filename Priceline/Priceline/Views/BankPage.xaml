@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Priceline.Views.BankPage"
+             Title="Card details"
+             BackgroundImage="payd.jpg">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                
+             Orientation="Vertical"
+             Padding="14">
+
+                <Image
+                              Grid.Column="1"
+                              HeightRequest="52"
+                              HorizontalOptions="End"
+                              Source="Pment.png"
+                              VerticalOptions="Center"
+                              WidthRequest="50" />
+
+
+
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="holder.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Placeholder="Account holder" Text="{Binding acc_holder}" x:Name="acc_holder" HeightRequest="50" WidthRequest="300"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="bankN.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Placeholder="Bank name" Text="{Binding bank_Name}"  x:Name="bank_Name" HeightRequest="50" WidthRequest="300"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="cards.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Placeholder="Card no." Text="{Binding card_no}"  x:Name="card_no" HeightRequest="50" WidthRequest="300"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="accN.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+
+                    <Entry Placeholder="Account no." Text="{Binding acc_no}"  x:Name="acc_no" HeightRequest="50" WidthRequest="300"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="branch.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Placeholder="Branch no." Text="{Binding branch_no}" x:Name="branch_no" HeightRequest="50" WidthRequest="300"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="type.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Placeholder="Account type" Text="{Binding acc_Type}" x:Name="acc_Type" HeightRequest="50" WidthRequest="300"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="cvv.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Placeholder="CVV" Text="{Binding cvv}"  x:Name="cvv" HeightRequest="50" WidthRequest="300"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="date.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Entry Placeholder="Expiry date" Text="{Binding exp_Date}"  x:Name="exp_Date" HeightRequest="50" WidthRequest="300"/>
+
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="phone.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Entry Placeholder="Cellphone no." x:Name="phone_no" Text="{Binding phone_no}" HeightRequest="50" WidthRequest="300"/>
+
+                    </StackLayout>
+                </StackLayout>
+
+
+                <Button
+                Clicked="postBank"
+                HorizontalOptions="Fill"
+                BorderRadius="5"
+                BackgroundColor="#007bff"
+                Text="Submit/Update"
+                TextColor="White"/>
+
+
+              
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

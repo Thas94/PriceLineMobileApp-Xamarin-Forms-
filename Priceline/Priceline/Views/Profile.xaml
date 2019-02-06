@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Priceline.Views.Profile"
+             Padding="14"
+             BackgroundColor="White"
+             Title="Update User"
+             BackgroundImage="updt.jpg">
+ 
+    <ContentPage.Content>
+        <ScrollView>
+          <StackLayout 
+            Orientation="Vertical"
+            Padding="16">
+
+                <Image
+                              Grid.Column="0" 
+                              Grid.Row="0"
+                              HeightRequest="52"
+                              HorizontalOptions="End"
+                              Source="updateUser.png"
+                              VerticalOptions="Center"
+                              WidthRequest="50" 
+                    Style="ce"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="userr.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Entry Placeholder="Username" Text="{Binding UserName}"  x:Name="username" HeightRequest="50" WidthRequest="300"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="name.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Entry Placeholder="FirstName" Text="{Binding FirstName}" x:Name="FirstName" HeightRequest="50" WidthRequest="300"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="name.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Entry Placeholder="LastName" Text="{Binding LastName}" x:Name="LastName" HeightRequest="50" WidthRequest="300"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="email.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Entry Placeholder="Email" Text="{Binding Email}" x:Name="Email" HeightRequest="50" WidthRequest="300"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="password.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="False" x:Name="Password" HeightRequest="50" WidthRequest="300"/>
+                    </StackLayout>
+                </StackLayout>
+
+
+                <Entry IsVisible="False" Placeholder="Id" Text="{Binding Id}"  x:Name="Id"/>
+                <Entry IsVisible="False" Placeholder="PasswordHash" Text="{Binding PasswordHash}"  x:Name="PasswordHash"/>
+                <Entry IsVisible="False" Placeholder="SecurityStamp" Text="{Binding SecurityStamp}"  x:Name="SecurityStamp"/>
+
+                <Button
+              
+                HorizontalOptions="Fill"
+                BorderRadius="5"
+                BackgroundColor="#007bff"
+                Text="Update"
+                TextColor="White"
+                Clicked="UpdateProfile"
+               />
+            
+
+         </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

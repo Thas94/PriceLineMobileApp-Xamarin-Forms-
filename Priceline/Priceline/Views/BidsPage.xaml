@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Priceline.Views.BidsPage"
+             Title="Bids"
+             Padding="14"
+             BackgroundImage="bids.jpg">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="BidListView" ItemTapped="BidListView_ItemTapped"  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<ViewCell>-->
+
+                            <ImageCell  Text="{Binding City}" Detail="{Binding startDate}"  />
+
+                            <!--<Label Text="{Binding Country}"/>-->
+
+
+                        <!--</ViewCell>-->
+                       
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

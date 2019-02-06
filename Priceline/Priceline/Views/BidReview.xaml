@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Priceline.Views.BidReview"
+             BackgroundColor="White"
+             Title="Bid Review"
+             Padding="14"
+             BackgroundImage="review.jpg">
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
+            <BoxView HeightRequest="10"/>
+            <Frame BackgroundColor="#29A3F7" HasShadow="True" CornerRadius="10" InputTransparent="True">
+                <StackLayout Orientation="Vertical" Spacing="10">
+
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="desti.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Label x:Name="destination" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="city.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Label x:Name="city" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="inDate.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Label x:Name="inDate" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="outDate.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Label x:Name="outDate" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="room.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Label x:Name="numRooms" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="nyt.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Label x:Name="numNights" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="amount.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Label x:Name="price" TextColor="White" FontSize="Medium"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Button
+                BackgroundColor="#2196F3"
+                Clicked="MakePayment"
+                Text="Proceed"
+                TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

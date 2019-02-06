@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Priceline.ViewModels"
+             x:Class="Priceline.Views.Registration"
+             BackgroundImage="updt.jpg">
+
+    <ContentPage.BindingContext>
+        <viewModels:RegisterViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout 
+            Orientation="Vertical"
+            Padding="16">
+            <Image
+                              Grid.Column="1"
+                              HeightRequest="52"
+                              HorizontalOptions="End"
+                              Source="addUser.png"
+                              VerticalOptions="Center"
+                              WidthRequest="50" />
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="userr.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Placeholder="Username" Text="{Binding UserName}" x:Name="registerUsername" HeightRequest="50" WidthRequest="300"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="name.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Placeholder="Name" Text="{Binding FirstName}" x:Name="registerName" HeightRequest="50" WidthRequest="300"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="name.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Placeholder="Surname" Text="{Binding LastName}" x:Name="registerSurname" HeightRequest="50" WidthRequest="300"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="email.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Placeholder="Email" Text="{Binding Email}" Keyboard="Email" x:Name="registerEmail" HeightRequest="50" WidthRequest="300"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="password.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True" x:Name="registerPassword" HeightRequest="50" WidthRequest="300"/>
+                </StackLayout>
+            </StackLayout>
+
+            <Button
+                Clicked="Register"
+                HorizontalOptions="Fill"
+                BorderRadius="5"
+                BackgroundColor="#007bff"
+                Text="Register"
+                TextColor="White"
+               />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

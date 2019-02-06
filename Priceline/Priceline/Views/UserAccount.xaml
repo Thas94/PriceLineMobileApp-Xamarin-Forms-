@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Priceline.Views.UserAccount"
+             Title="Account"
+             Padding="14">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Go to home" Order="Secondary" Priority="0" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem Text="Sign Out" Order="Secondary" Priority="0" Clicked="SignOut"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        
+        <ScrollView 
+            Orientation="Vertical">
+            
+            <StackLayout
+                Orientation="Vertical">
+                
+                <ActivityIndicator
+                x:Name="activityIndicator"
+                IsEnabled="true"
+                IsRunning="{Binding IsBusy}"
+                IsVisible="true"
+                Color="#E3435D"/>
+                
+                <Grid x:Name="profileView" IsVisible="False">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Orientation="Vertical" Grid.Row="0">
+                        <Image Source="user.png" />
+                        <Button Clicked="EditProfile" FontSize="Large" Text="Profile" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Grid.Row="1" >
+                        <Image Source="card.png" />
+                        <Button Clicked="BankDetails" FontSize="Large" Text="payment Information" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical"  Grid.Row="2">
+                        <Image Source="book.png" />
+                        <Button Clicked="ViewBids"  FontSize="Large" Text="Bid History" />
+                    </StackLayout>
+
+                </Grid>
+
+            </StackLayout>
+            
+            
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
